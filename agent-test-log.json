@@ -1,0 +1,762 @@
+{"timestamp": "2026-06-09T19:10:26.039661", "step": "init", "status": "info", "detail": "Agent 开发测试开始", "score": 0}
+{"timestamp": "2026-06-09T19:10:26.039773", "step": "step-1", "status": "running", "detail": "检查 NixOS 环境...", "score": null}
+{"timestamp": "2026-06-09T19:10:26.039865", "step": "step-1", "status": "error", "detail": "未检测到 NixOS 或 Nix 环境", "score": 0}
+{"timestamp": "2026-06-09T19:10:26.041611", "step": "step-1", "status": "info", "detail": "系统: Linux VM-74-246-ubuntu 6.8.0-71-generic #71-Ubuntu SMP PREEMPT_DYNAMIC Tue Jul 22 16:52:38 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux", "score": null}
+{"timestamp": "2026-06-09T19:10:26.043811", "step": "step-1", "status": "info", "detail": "内存: total        used        free      shared  buff/cache   available\nMem:           7.4Gi       2.1Gi       342Mi       1.6Mi       5.3Gi       5.3Gi\nSwap:          4.0Gi        90Mi       3.9Gi", "score": null}
+{"timestamp": "2026-06-09T19:10:26.061937", "step": "step-1", "status": "info", "detail": "磁盘: Filesystem      Size  Used Avail Use% Mounted on\n/dev/vda2        40G   30G  8.1G  79% /", "score": null}
+{"timestamp": "2026-06-09T19:10:26.062014", "step": "step-2", "status": "running", "detail": "检测 Nix 包管理器...", "score": null}
+{"timestamp": "2026-06-09T19:10:26.062827", "step": "step-2", "status": "error", "detail": "Nix 未安装: ", "score": 0}
+{"timestamp": "2026-06-09T19:10:26.062896", "step": "step-2", "status": "running", "detail": "尝试安装 Nix 包管理器...", "score": null}
+{"timestamp": "2026-06-09T19:12:26.064462", "step": "step-2", "status": "error", "detail": "Nix 安装失败: timeout", "score": 0}
+{"timestamp": "2026-06-09T19:12:26.064607", "step": "step-3", "status": "running", "detail": "安装 Python 和 Node.js...", "score": null}
+{"timestamp": "2026-06-09T19:12:26.066749", "step": "step-3", "status": "info", "detail": "Python: Python 3.12.3", "score": null}
+{"timestamp": "2026-06-09T19:12:26.071159", "step": "step-3", "status": "info", "detail": "Node.js: v24.14.0", "score": null}
+{"timestamp": "2026-06-09T19:12:26.071243", "step": "step-3", "status": "running", "detail": "使用系统包管理器安装...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.822235", "step": "step-3", "status": "error", "detail": "安装失败: ", "score": 0}
+{"timestamp": "2026-06-09T19:12:31.822371", "step": "step-4", "status": "running", "detail": "部署最小 Agent 框架...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.822563", "step": "step-4", "status": "success", "detail": "Agent 框架已部署到 /tmp/agent-demo", "score": 10}
+{"timestamp": "2026-06-09T19:12:31.822609", "step": "step-5", "status": "running", "detail": "运行示例 Agent...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.855788", "step": "step-5", "status": "success", "detail": "Agent 执行成功", "score": 10}
+{"timestamp": "2026-06-09T19:12:31.855909", "step": "step-5", "status": "info", "detail": "============================================================", "score": null}
+{"timestamp": "2026-06-09T19:12:31.855951", "step": "step-5", "status": "info", "detail": "🤖 Agent 'nixos-tester' 执行任务: 分析当前目录环境", "score": null}
+{"timestamp": "2026-06-09T19:12:31.855982", "step": "step-5", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856009", "step": "step-5", "status": "info", "detail": "  2. 思考: 生成 3 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856033", "step": "step-5", "status": "info", "detail": "     - 1. read_file: {'path': '.'}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856055", "step": "step-5", "status": "info", "detail": "     - 2. analyze: {'content': 'file_content'}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856075", "step": "step-5", "status": "info", "detail": "     - 3. write_file: {'path': 'report.md'}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856096", "step": "step-5", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856132", "step": "step-5", "status": "info", "detail": "     ✅ read_file: Directory: .", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856155", "step": "step-5", "status": "info", "detail": "Contents: ['agent.py']", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856180", "step": "step-5", "status": "info", "detail": "     ✅ analyze: Analysis: 1 lines, 12 chars", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856201", "step": "step-5", "status": "info", "detail": "     ✅ write_file: Written to report.md", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856221", "step": "step-5", "status": "info", "detail": "  4. 学习: 当前得分 3", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856240", "step": "step-5", "status": "info", "detail": "============================================================", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856260", "step": "step-5", "status": "info", "detail": "🤖 Agent 'nixos-tester' 执行任务: 执行系统信息收集", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856280", "step": "step-5", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856300", "step": "step-5", "status": "info", "detail": "  2. 思考: 生成 2 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856319", "step": "step-5", "status": "info", "detail": "     - 1. shell: {'command': 'ls -la'}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856337", "step": "step-5", "status": "info", "detail": "     - 2. check_result: {}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856355", "step": "step-5", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856371", "step": "step-5", "status": "info", "detail": "     ✅ shell: RC=0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856390", "step": "step-5", "status": "info", "detail": "STDOUT:", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856408", "step": "step-5", "status": "info", "detail": "total 24", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856425", "step": "step-5", "status": "info", "detail": "drwxr-xr-x  2 root root  4096 Jun  9 19:12 .", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856443", "step": "step-5", "status": "info", "detail": "drwxrwxrwt 28 root root 12288 Jun", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856461", "step": "step-5", "status": "info", "detail": "     ❌ check_result: Tool check_result not found", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856480", "step": "step-5", "status": "info", "detail": "  4. 学习: 当前得分 4", "score": null}
+{"timestamp": "2026-06-09T19:12:31.856499", "step": "step-6", "status": "running", "detail": "功能测试: 验证 agent 工具链...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.886489", "step": "step-6", "status": "info", "detail": "✅ 文件读取工具", "score": null}
+{"timestamp": "2026-06-09T19:12:31.914978", "step": "step-6", "status": "info", "detail": "✅ Shell 执行工具", "score": null}
+{"timestamp": "2026-06-09T19:12:31.915885", "step": "step-6", "status": "info", "detail": "✅ 报告生成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.943355", "step": "step-6", "status": "info", "detail": "✅ 完整执行循环", "score": null}
+{"timestamp": "2026-06-09T19:12:31.943470", "step": "step-6", "status": "success", "detail": "全部 4 项测试通过", "score": 10.0}
+{"timestamp": "2026-06-09T19:12:31.943507", "step": "step-7", "status": "running", "detail": "性能测试: 100 次执行循环...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972286", "step": "step-7", "status": "success", "detail": "性能测试完成", "score": 10}
+{"timestamp": "2026-06-09T19:12:31.972469", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972514", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972543", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972576", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972600", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972621", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972643", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972664", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 1", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972684", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972704", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972723", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972746", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972766", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972786", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972805", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 2", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972825", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972878", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972903", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972922", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972940", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972959", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972978", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 3", "score": null}
+{"timestamp": "2026-06-09T19:12:31.972997", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973016", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973034", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973053", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973071", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973091", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973109", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 4", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973128", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973153", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973173", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973191", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973210", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973228", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973247", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 5", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973266", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973284", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973302", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973320", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973337", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973356", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973378", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 6", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973397", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973416", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973434", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973452", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973470", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973489", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973508", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 7", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973527", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973546", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973564", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973582", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973600", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973618", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973637", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 8", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973660", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973679", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973698", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973717", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973736", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973755", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973773", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 9", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973795", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973814", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973847", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973876", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973897", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973916", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973935", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 10", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973955", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973973", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.973992", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974015", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974035", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974054", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974073", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 11", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974093", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974111", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974129", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974148", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974166", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974185", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974203", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 12", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974227", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974247", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974265", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974283", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974301", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974320", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974338", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 13", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974357", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974373", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974391", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974428", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974453", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974484", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974518", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 14", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974554", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974587", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974620", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974653", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974685", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974719", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974751", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 15", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974783", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974815", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974867", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974903", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974936", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.974969", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975007", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 16", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975043", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975077", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975109", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975141", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975173", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975206", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975240", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 17", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975272", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975305", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975336", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975368", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975399", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975432", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975465", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 18", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975497", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975529", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975560", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975591", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975622", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975654", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975687", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 19", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975719", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975751", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975783", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975813", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975862", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975898", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975937", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 20", "score": null}
+{"timestamp": "2026-06-09T19:12:31.975973", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976004", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976036", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976067", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976099", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976132", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976165", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 21", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976198", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976232", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976263", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976294", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976325", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976359", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976388", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 22", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976423", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976455", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976487", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976517", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976550", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976582", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976614", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 23", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976646", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976679", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976709", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976740", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976773", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976810", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976870", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 24", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976909", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976944", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.976976", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977007", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977039", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977072", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977103", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 25", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977136", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977168", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977200", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977231", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977262", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977294", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977325", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 26", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977358", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977394", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977425", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977457", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977488", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977521", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977552", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 27", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977584", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977616", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977646", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977678", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977710", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977748", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977781", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 28", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977813", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977862", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977898", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977929", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977961", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.977994", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978025", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 29", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978058", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978089", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978121", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978151", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978183", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978215", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978246", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 30", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978279", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978311", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978343", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978376", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978409", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978441", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978473", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 31", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978506", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978538", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978569", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978600", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978637", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978672", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978703", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 32", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978734", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978766", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978798", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978841", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978880", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978916", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978948", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 33", "score": null}
+{"timestamp": "2026-06-09T19:12:31.978981", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979013", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979046", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979078", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979109", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979141", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979172", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 34", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979204", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979252", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979282", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979313", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979344", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979378", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979410", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 35", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979441", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979472", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979502", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979537", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979571", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979603", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979634", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 36", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979665", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979696", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979726", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979756", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979786", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979817", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979863", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 37", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979899", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979929", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979960", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.979991", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980022", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980053", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980084", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 38", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980116", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980147", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980180", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980212", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980245", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980279", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980311", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 39", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980345", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980381", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980415", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980454", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980490", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980523", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980556", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 40", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980589", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980622", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980654", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980689", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980722", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980748", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980770", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 41", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980793", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980827", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980888", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980921", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980947", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980971", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.980994", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 42", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981017", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981038", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981059", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981079", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981099", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981120", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981139", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 43", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981160", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981182", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981210", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981232", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981253", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981277", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981300", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 44", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981323", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981346", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981369", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981392", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981415", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981439", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981460", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 45", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981482", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981504", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981526", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981553", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981586", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981620", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981651", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 46", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981683", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981714", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981745", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981775", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981806", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981856", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981891", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 47", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981924", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981956", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.981994", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982026", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982058", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982089", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982120", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 48", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982152", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982185", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982216", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982246", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982278", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982309", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982340", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 49", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982374", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982406", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982436", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982466", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982497", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982527", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982558", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 50", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982589", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982620", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982650", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982681", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982711", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982743", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982774", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 51", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982806", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982879", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982925", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982963", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.982998", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983034", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983069", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 52", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983106", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983141", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983176", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983210", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983245", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983280", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983315", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 53", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983351", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983388", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983424", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983458", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983495", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983531", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983566", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 54", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983601", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983638", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983672", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983706", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983741", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983777", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983813", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 55", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983892", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983931", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.983966", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984002", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984036", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984073", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984109", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 56", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984146", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984182", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984217", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984251", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984286", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984322", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984358", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 57", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984394", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984426", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984460", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984496", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984531", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984567", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984602", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 58", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984638", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984674", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984710", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984744", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984779", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984815", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984866", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 59", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984910", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984948", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.984982", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985017", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985052", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985087", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985122", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 60", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985158", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985193", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985227", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985263", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985298", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985334", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985368", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 61", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985404", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985440", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985475", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985510", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985544", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985580", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985615", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 62", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985651", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985686", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985721", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985755", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985790", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985827", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985883", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 63", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985922", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985954", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.985985", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986020", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986054", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986090", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986124", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 64", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986161", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986197", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986232", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986266", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986300", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986336", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986372", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 65", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986409", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986446", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986482", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986516", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986552", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986588", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986623", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 66", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986659", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986694", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986729", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986763", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986797", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986845", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986885", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 67", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986920", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986951", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.986982", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987014", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987044", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987076", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987106", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 68", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987138", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987169", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987200", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987231", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987262", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987293", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987324", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 69", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987355", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987390", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987421", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987451", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987482", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987513", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987544", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 70", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987575", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987606", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987636", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987667", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987697", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987734", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987767", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 71", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987799", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987841", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987883", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987920", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987956", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.987991", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988026", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 72", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988062", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988098", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988133", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988168", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988203", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988238", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988273", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 73", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988308", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988343", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988379", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988415", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988450", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988485", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988520", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 74", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988556", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988591", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988626", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988661", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988696", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988737", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988775", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 75", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988811", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988859", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988897", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988932", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.988967", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989019", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989052", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 76", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989088", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989124", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989160", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989194", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989228", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989264", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989298", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 77", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989334", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989369", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989405", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989440", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989476", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989511", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989545", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 78", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989582", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989617", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989652", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989686", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989727", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989765", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989800", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 79", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989846", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989884", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989919", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989954", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.989989", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990025", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990060", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 80", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990096", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990131", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990167", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990201", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990236", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990271", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990306", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 81", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990342", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990379", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990416", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990450", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990486", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990522", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990558", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 82", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990594", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990630", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990665", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990706", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990743", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990779", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990815", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 83", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990870", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990909", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990945", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.990980", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991014", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991051", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991087", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 84", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991122", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991158", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991193", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991227", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991261", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991297", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991333", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 85", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991369", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991405", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991440", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991475", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991510", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991546", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991580", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 86", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991616", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991652", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991688", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991729", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991767", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991803", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991851", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 87", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991891", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991926", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991963", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.991997", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992032", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992067", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992102", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 88", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992138", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992172", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992207", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992241", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992275", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992311", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992346", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 89", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992384", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992420", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992455", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992489", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992524", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992559", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992593", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 90", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992630", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992665", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992706", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992742", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992778", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992814", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992868", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 91", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992909", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992944", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.992979", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993013", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993047", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993082", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993117", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 92", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993152", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993187", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993222", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993256", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993290", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993327", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993362", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 93", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993400", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993435", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993471", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993506", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993541", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993578", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993613", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 94", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993648", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993684", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993724", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993760", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993795", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993842", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993879", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 95", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993915", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993951", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.993986", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994022", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994057", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994093", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994128", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 96", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994163", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994198", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994233", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994284", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994318", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994354", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994392", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 97", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994428", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994464", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994500", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994534", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994570", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994605", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994640", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 98", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994675", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994723", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994761", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994796", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994842", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994879", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994913", "step": "step-7", "status": "info", "detail": "🤖 Agent 'demo-agent' 执行任务: test task 99", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994950", "step": "step-7", "status": "info", "detail": "  1. 感知: perceived", "score": null}
+{"timestamp": "2026-06-09T19:12:31.994985", "step": "step-7", "status": "info", "detail": "  2. 思考: 生成 1 个行动", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995020", "step": "step-7", "status": "info", "detail": "     - 1. shell: {'command': \"echo 'hello from agent'\"}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995055", "step": "step-7", "status": "info", "detail": "  3. 行动: 执行完成", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995089", "step": "step-7", "status": "info", "detail": "     ❌ shell: <lambda>() got an unexpected keyword argument 'command'", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995125", "step": "step-7", "status": "info", "detail": "  4. 学习: 当前得分 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995160", "step": "step-7", "status": "info", "detail": "100 次执行耗时: 0.00s", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995194", "step": "step-7", "status": "info", "detail": "平均每次: 0.0ms", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995229", "step": "step-7", "status": "info", "detail": "最终得分: 0", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995264", "step": "step-7", "status": "info", "detail": "内存条目: 300", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995311", "step": "step-8", "status": "running", "detail": "自评报告生成...", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995582", "step": "step-8", "status": "success", "detail": "自评完成: 8.00/10, 等级 B", "score": 8.0}
+{"timestamp": "2026-06-09T19:12:31.995644", "step": "step-8", "status": "info", "detail": "维度评分: {\"架构完整性\": 9, \"工具可扩展性\": 8, \"错误处理\": 7, \"性能\": 8, \"文档\": 7, \"可测试性\": 9}", "score": null}
+{"timestamp": "2026-06-09T19:12:31.995685", "step": "complete", "status": "success", "detail": "Agent 开发测试全部完成! 最终评分: 8.00/10", "score": 8.0}

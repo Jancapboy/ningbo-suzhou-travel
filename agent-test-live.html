@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="15">
+<title>Agent 测试直播 - 实时</title>
+<style>
+body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",monospace;background:#0a0e17;color:#e0e6ed;padding:2rem;line-height:1.8;max-width:900px;margin:0 auto}
+.header{text-align:center;padding:2rem 0;border-bottom:2px solid #60a5fa;margin-bottom:2rem}
+.header h1{font-size:1.5rem;background:linear-gradient(90deg,#60a5fa,#34d399);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.log{margin:0.4rem 0;padding:0.6rem 1rem;border-left:3px solid #333;border-radius:4px;background:rgba(15,23,42,0.5)}
+.log.info{border-left-color:#fbbf24}
+.log.success{border-left-color:#34d399}
+.log.error{border-left-color:#ef4444}
+.log.running{border-left-color:#60a5fa}
+.time{color:#8896ab;font-size:0.75rem;margin-right:0.5rem}
+.status{position:fixed;top:1rem;right:1rem;background:#1a2332;padding:1rem;border-radius:8px;border:1px solid #30363d;z-index:100}
+.progress{height:6px;background:#333;border-radius:3px;margin:0.5rem 0;width:200px}
+.progress-bar{height:100%;background:linear-gradient(90deg,#60a5fa,#34d399);border-radius:3px;transition:width 0.5s}
+.step-tag{font-size:0.75rem;padding:0.2rem 0.5rem;border-radius:4px;background:rgba(96,165,250,0.2);color:#60a5fa;margin-right:0.5rem}
+</style>
+</head>
+<body>
+<div class="status">
+<h3 style="margin:0 0 0.5rem 0">🤖 Agent 测试直播</h3>
+<p style="font-size:0.85rem;color:#8896ab;margin:0.3rem 0">目标: VM-74-246-ubuntu</p>
+<p style="font-size:0.85rem;color:#8896ab;margin:0.3rem 0">模拟 NixOS 环境</p>
+<div class="progress"><div class="progress-bar" id="bar" style="width:0%"></div></div>
+<p style="font-size:0.85rem;margin:0.3rem 0" id="pct">0% 完成</p>
+</div>
+
+<div class="header">
+<h1>Agent 开发测试 - 实时直播</h1>
+<p style="color:#8896ab">NixOS 环境模拟测试 | 完整流程可视化</p>
+</div>
+
+<div id="logs"></div>
+
+<p style="margin-top:2rem;color:#8896ab;text-align:center">🔄 每 15 秒自动刷新 | 若卡住请按 F5</p>
+
+<script>
+const logs = [];
+function addLog(ts, step, status, detail) {
+    const div = document.createElement('div');
+    div.className = 'log ' + status;
+    div.innerHTML = '<span class="time">[' + ts + ']</span> <span class="step-tag">' + step + '</span> ' + detail;
+    document.getElementById('logs').appendChild(div);
+}
+
+// 初始数据（从后端读取）
+fetch('/agent-test-log.json?t=' + Date.now())
+    .then(r => r.text())
+    .then(text => {
+        text.split('\n').forEach(line => {
+            if(line.trim()) try {
+                const l = JSON.parse(line);
+                const ts = l.timestamp.split('T')[1].split('.')[0];
+                addLog(ts, l.step, l.status, l.detail);
+                if(l.status === 'success' || l.status === 'error') logs.push(l);
+            } catch(e) {}
+        });
+        const pct = Math.min(100, Math.round(logs.length / 8 * 100));
+        document.getElementById('bar').style.width = pct + '%';
+        document.getElementById('pct').textContent = pct + '% 完成';
+    })
+    .catch(() => {
+        addLog('NOW', 'system', 'info', '等待日志文件生成... 测试正在进行中');
+    });
+</script>
+</body>
+</html>

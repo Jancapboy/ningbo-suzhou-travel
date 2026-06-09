@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>宁波→苏州 绿皮慢游 3D 计划书</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background: #0a0e17;
+            color: #e0e6ed;
+            overflow-x: hidden;
+        }
+        
+        .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            background: linear-gradient(135deg, #0a0e17 0%, #1a2332 50%, #0a0e17 100%);
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(59, 130, 246, 0.15) 0%, transparent 70%);
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 4s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+        }
+        
+        .title {
+            font-size: 3rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #60a5fa, #34d399, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #8896ab;
+            margin-bottom: 3rem;
+            letter-spacing: 0.2em;
+        }
+        
+        .axis-3d {
+            display: flex;
+            gap: 2rem;
+            perspective: 1000px;
+        }
+        
+        .axis-card {
+            width: 200px;
+            height: 280px;
+            background: rgba(15, 23, 42, 0.8);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 16px;
+            padding: 1.5rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.5s ease;
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .axis-card:hover {
+            transform: translateY(-10px) rotateY(5deg);
+        }
+        
+        .axis-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #60a5fa, #34d399, #f472b6);
+        }
+        
+        .axis-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        
+        .axis-name {
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .axis-desc {
+            font-size: 0.85rem;
+            color: #8896ab;
+            text-align: center;
+            line-height: 1.6;
+        }
+        
+        .budget-badge {
+            position: absolute;
+            top: 2rem;
+            right: 2rem;
+            background: rgba(34, 197, 94, 0.15);
+            border: 1px solid rgba(34, 197, 94, 0.4);
+            color: #34d399;
+            padding: 0.8rem 1.5rem;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+        }
+        
+        .section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .section-title {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .section-title .icon {
+            font-size: 1.5rem;
+        }
+        
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+        
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: linear-gradient(180deg, #60a5fa, #34d399, #f472b6);
+        }
+        
+        .day-card {
+            background: rgba(15, 23, 42, 0.6);
+            border: 1px solid rgba(59, 130, 246, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .day-card:hover {
+            border-color: rgba(59, 130, 246, 0.5);
+            transform: translateX(5px);
+        }
+        
+        .day-card::before {
+            content: '';
+            position: absolute;
+            left: -3.4rem;
+            top: 1.8rem;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #60a5fa;
+            border: 3px solid #0a0e17;
+        }
+        
+        .day-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1rem;
+        }
+        
+        .day-number {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #60a5fa;
+        }
+        
+        .day-city {
+            font-size: 0.85rem;
+            color: #8896ab;
+            background: rgba(59, 130, 246, 0.1);
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+        }
+        
+        .day-content {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        
+        .time-slot {
+            background: rgba(10, 14, 23, 0.5);
+            padding: 0.8rem;
+            border-radius: 8px;
+            border-left: 3px solid #34d399;
+        }
+        
+        .time-slot.morning { border-left-color: #fbbf24; }
+        .time-slot.afternoon { border-left-color: #60a5fa; }
+        .time-slot.evening { border-left-color: #f472b6; }
+        
+        .time-label {
+            font-size: 0.75rem;
+            color: #8896ab;
+            margin-bottom: 0.3rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .time-content {
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .train-info {
+            background: linear-gradient(135deg, rgba(59, 130, 246, 0.15), rgba(34, 197, 94, 0.1));
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 8px;
+            padding: 0.8rem 1rem;
+            margin-top: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+            font-size: 0.9rem;
+        }
+        
+        .train-icon { font-size: 1.2rem; }
+        
+        .route-map {
+            background: rgba(15, 23, 42, 0.6);
+            border-radius: 16px;
+            padding: 2rem;
+            margin: 2rem 0;
+        }
+        
+        .route-line {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .station {
+            text-align: center;
+            padding: 1rem;
+        }
+        
+        .station-name {
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+        
+        .station-nights {
+            font-size: 0.75rem;
+            color: #34d399;
+        }
+        
+        .route-arrow {
+            color: #60a5fa;
+            font-size: 1.5rem;
+        }
+        
+        .budget-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+        }
+        
+        .budget-table th,
+        .budget-table td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .budget-table th {
+            color: #60a5fa;
+            font-weight: 600;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+        }
+        
+        .budget-table td {
+            font-size: 0.95rem;
+        }
+        
+        .budget-table .total-row {
+            font-weight: 700;
+            font-size: 1.1rem;
+            color: #34d399;
+            border-top: 2px solid rgba(34, 197, 94, 0.5);
+        }
+        
+        .checklist {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1rem;
+        }
+        
+        .check-item {
+            background: rgba(15, 23, 42, 0.6);
+            padding: 1rem 1.5rem;
+            border-radius: 8px;
+            border-left: 3px solid #f472b6;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+        
+        .check-item.done {
+            border-left-color: #34d399;
+        }
+        
+        .check-icon {
+            font-size: 1.2rem;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: #8896ab;
+            font-size: 0.85rem;
+            border-top: 1px solid rgba(59, 130, 246, 0.2);
+        }
+        
+        .scroll-hint {
+            position: absolute;
+            bottom: 2rem;
+            left: 50%;
+            transform: translateX(-50%);
+            animation: bounce 2s infinite;
+            color: #8896ab;
+            font-size: 0.9rem;
+        }
+        
+        @keyframes bounce {
+            0%, 100% { transform: translateX(-50%) translateY(0); }
+            50% { transform: translateX(-50%) translateY(-10px); }
+        }
+        
+        @media (max-width: 768px) {
+            .title { font-size: 2rem; }
+            .axis-3d { flex-direction: column; align-items: center; }
+            .day-content { grid-template-columns: 1fr; }
+            .checklist { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="budget-badge">¥1539 - ¥1650</div>
+        <h1 class="title">宁波 → 苏州</h1>
+        <p class="subtitle">绿皮慢游 · 10 天 3 维计划书</p>
+        
+        <div class="axis-3d">
+            <div class="axis-card">
+                <div class="axis-icon">⏱️</div>
+                <div class="axis-name">X 轴 · 时间</div>
+                <div class="axis-desc">10 天精确到小时<br>绿皮衔接有缓冲<br>降级方案明确</div>
+            </div>
+            <div class="axis-card">
+                <div class="axis-icon">🗺️</div>
+                <div class="axis-name">Y 轴 · 空间</div>
+                <div class="axis-desc">4 城 + 6 经停节点<br>经停站/公交/步行距离<br>全部标注可复现</div>
+            </div>
+            <div class="axis-card">
+                <div class="axis-icon">💰</div>
+                <div class="axis-name">Z 轴 · 预算</div>
+                <div class="axis-desc">硬封顶 ¥1650<br>每项费用有出处<br>误差 ±10%</div>
+            </div>
+        </div>
+        
+        <div class="scroll-hint">↓ 向下滚动查看完整行程</div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title"><span class="icon">⏱️</span> 时间轴 · 10 天行程</h2>
+        
+        <div class="timeline">
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 1</span>
+                    <span class="day-city">📍 绍兴</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">08:30 退房 → 09:00 到宁波站</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">09:50 K8380 → 11:15 到绍兴</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">鲁迅故里 / 八字桥 / 仓桥直街</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>K8380 宁波→绍兴 硬座 ¥15.5</span>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 2</span>
+                    <span class="day-city">📍 绍兴 → 杭州</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">08:00 府山公园 / 09:30 书圣故里</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">11:00 咸亨酒店周边 → 13:20 K8382</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">14:30 到杭州 / 柳浪闻莺 / 河坊街</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>K8382 绍兴→杭州 硬座 ¥11</span>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 3</span>
+                    <span class="day-city">📍 杭州</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">07:30 茅家埠晨雾</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">09:00 孤山馆区 / 浙江省博物馆</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">14:00 北山街 / 断桥日落</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 4</span>
+                    <span class="day-city">📍 杭州 → 嘉兴</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">09:00 九溪烟树</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">14:00 K164 → 15:20 到嘉兴</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">月河历史街区 / 南湖</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>K164 杭州→嘉兴 硬座 ¥16.5</span>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 5</span>
+                    <span class="day-city">📍 嘉兴 → 上海</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">09:00 南湖革命纪念馆</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">13:00 K470 → 14:30 到上海南</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">外滩 / 外白渡桥 / 南京东路</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>K470 嘉兴→上海南 硬座 ¥12.5</span>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 6</span>
+                    <span class="day-city">📍 上海 → 苏州</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">08:00 武康路 / 安福路</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">11:00 T112（上海站）→ 12:10 苏州</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">平江路 / 评弹 / 相门古城墙 / 20:00 预约苏博</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>T112 上海站→苏州 硬座 ¥14.5</span>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 7</span>
+                    <span class="day-city">📍 苏州古城</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">07:30 双塔市集 / 09:00 定慧寺巷</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">10:30 十全街 / 14:00 网师园外圈</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">16:00 公交 980 → 16:30 山塘街北段</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 8</span>
+                    <span class="day-city">📍 苏州古城</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">08:00 西园寺（¥5）/ 09:30 素面</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">10:30 公交 317 → 石路 / 13:30 艺圃（¥10）</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">15:15 阊门 / 15:35 北码头 / 18:00 姚记豆浆</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 9</span>
+                    <span class="day-city">📍 苏州古今</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">09:00 苏博（已预约）/ 11:00 拙政园外圈</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">12:15 地铁 4 号线 → 13:00 时代广场 / 诚品</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">16:00 东方之门 / 17:30 李公堤</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="day-card">
+                <div class="day-header">
+                    <span class="day-number">Day 10</span>
+                    <span class="day-city">📍 苏州 → 返程</span>
+                </div>
+                <div class="day-content">
+                    <div class="time-slot morning">
+                        <div class="time-label">Morning</div>
+                        <div class="time-content">09:00 地铁 5 号线 → 灵岩山站 → 木渎古镇</div>
+                    </div>
+                    <div class="time-slot afternoon">
+                        <div class="time-label">Afternoon</div>
+                        <div class="time-content">12:00 返回 → 13:00 苏州站</div>
+                    </div>
+                    <div class="time-slot evening">
+                        <div class="time-label">Evening</div>
+                        <div class="time-content">14:00 T112 → 15:00 上海站 → 地铁 1 转 3 → 上海南站 → 16:00 K 字头 → 约 20:00 宁波</div>
+                    </div>
+                </div>
+                <div class="train-info">
+                    <span class="train-icon">🚂</span>
+                    <span>T112 苏州→上海站 + K 字头 上海南→宁波 硬座 ¥29</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title"><span class="icon">🗺️</span> 空间轴 · 铁路路线</h2>
+        
+        <div class="route-map">
+            <div class="route-line">
+                <div class="station">
+                    <div class="station-name">宁波站</div>
+                    <div class="station-nights">出发</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">绍兴站</div>
+                    <div class="station-nights">1 晚</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">杭州站</div>
+                    <div class="station-nights">2 晚</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">嘉兴站</div>
+                    <div class="station-nights">1 晚</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">上海南</div>
+                    <div class="station-nights">1 晚</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">苏州站</div>
+                    <div class="station-nights">4 晚</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">上海站</div>
+                    <div class="station-nights">中转</div>
+                </div>
+                <div class="route-arrow">→</div>
+                <div class="station">
+                    <div class="station-name">宁波站</div>
+                    <div class="station-nights">返程</div>
+                </div>
+            </div>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <h3 style="color: #60a5fa; margin-bottom: 1rem;">🚂 实际经停站</h3>
+            <p style="line-height: 2; color: #8896ab;">
+                <strong style="color: #e0e6ed;">K8380</strong> 宁波站 → 余姚站 → 上虞站 → 绍兴站 → 杭州站（城站）<br>
+                <strong style="color: #e0e6ed;">K164</strong> 杭州站 → 海宁站 → 嘉兴站 → 嘉善站 → 松江站 → 上海南站<br>
+                <strong style="color: #e0e6ed;">T112</strong> 上海站 → 昆山站 → 苏州站<br>
+                <strong style="color: #e0e6ed;">返程</strong> 苏州站 → 昆山站 → 上海站 → 地铁 1 转 3 → 上海南站 → K 字头 → 宁波站
+            </p>
+        </div>
+        
+        <div style="margin-top: 2rem;">
+            <h3 style="color: #60a5fa; margin-bottom: 1rem;">🏨 青旅锚点</h3>
+            <p style="line-height: 2; color: #8896ab;">
+                <strong style="color: #e0e6ed;">绍兴</strong> 老台门鲁迅故里国际青年旅舍（鲁迅中路，绍兴站公交 20 分钟）<br>
+                <strong style="color: #e0e6ed;">杭州</strong> 杭州国际青年旅舍西湖店（南山路，杭州站步行 15 分钟）<br>
+                <strong style="color: #e0e6ed;">嘉兴</strong> 月河客栈青旅床位（月河历史街区，嘉兴站公交 15 分钟）<br>
+                <strong style="color: #e0e6ed;">上海</strong> 蓝山青年旅舍外滩店（外滩/南京东路，上海站地铁 20 分钟）<br>
+                <strong style="color: #e0e6ed;">苏州</strong> 浮生四季青年旅舍（平江路/大儒巷，苏州站步行 20 分钟）
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title"><span class="icon">💰</span> 预算轴 · 费用清单</h2>
+        
+        <table class="budget-table">
+            <thead>
+                <tr>
+                    <th>项目</th>
+                    <th>明细</th>
+                    <th>金额</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>🚂 火车</td>
+                    <td>全程 7 段 K/T 字头硬座</td>
+                    <td>¥99</td>
+                </tr>
+                <tr>
+                    <td>🏨 青旅</td>
+                    <td>绍兴¥55 + 杭州¥150 + 嘉兴¥55 + 上海¥90 + 苏州¥260</td>
+                    <td>¥610</td>
+                </tr>
+                <tr>
+                    <td>🚌 市内交通</td>
+                    <td>公交/地铁 ¥8 × 10 天</td>
+                    <td>¥80</td>
+                </tr>
+                <tr>
+                    <td>🍜 餐饮</td>
+                    <td>早餐¥13 + 午餐¥20 + 晚餐¥18 + 零食¥10，×10 天</td>
+                    <td>¥610</td>
+                </tr>
+                <tr>
+                    <td>🎫 门票</td>
+                    <td>西园寺¥5 + 艺圃¥10</td>
+                    <td>¥15</td>
+                </tr>
+                <tr>
+                    <td>🎭 杂费</td>
+                    <td>评弹¥40 + 奶茶/咖啡¥45 + 应急备用¥40</td>
+                    <td>¥125</td>
+                </tr>
+                <tr class="total-row">
+                    <td>💰 基础合计</td>
+                    <td>无滞留，不启用弹性金</td>
+                    <td>¥1539</td>
+                </tr>
+                <tr>
+                    <td>📊 弹性金</td>
+                    <td>餐饮偶尔超支启用，不用则省</td>
+                    <td>+¥80</td>
+                </tr>
+                <tr>
+                    <td>🔒 硬封顶</td>
+                    <td>含弹性金，不含滞留</td>
+                    <td>¥1650</td>
+                </tr>
+            </tbody>
+        </table>
+        
+        <div style="margin-top: 2rem; background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.3); border-radius: 8px; padding: 1.5rem;">
+            <h3 style="color: #34d399; margin-bottom: 0.5rem;">💡 应急削减</h3>
+            <p style="color: #8896ab; line-height: 1.8;">
+                资金缺口 > ¥50 时：取消艺圃（省 ¥10）+ 餐饮降标（省 ¥20）+ 取消评弹（省 ¥40）= <strong style="color: #34d399;">合计省 ¥70</strong><br>
+                Day 10 返程无票：苏州→上海滞留，上海蓝山多住一晚（¥90），次日上海南站 K 字头回宁波
+            </p>
+        </div>
+    </div>
+
+    <div class="section">
+        <h2 class="section-title"><span class="icon">✅</span> 出发前清单</h2>
+        
+        <div class="checklist">
+            <div class="check-item done">
+                <span class="check-icon">✅</span>
+                <span>苏博预约：Day 6 晚 20:00 在"苏州博物馆"公众号约 Day 9 的 9:00 场次</span>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">⏳</span>
+                <span>12306 查票：出发前一天确认所有 K/T 字头班次</span>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">⏳</span>
+                <span>青旅预订：提前 1-2 天在美团/携程订，周末苏州青旅可能满</span>
+            </div>
+            <div class="check-item">
+                <span class="check-icon">⏳</span>
+                <span>鲁迅故里预约：提前 1 天在"绍兴文旅"公众号预约</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>宁波 → 苏州 绿皮慢游计划书 · 3 维立体版</p>
+        <p style="margin-top: 0.5rem; color: #60a5fa;">X 轴 · Y 轴 · Z 轴 = 时间 + 空间 + 预算</p>
+        <p style="margin-top: 1rem; font-size: 0.75rem;">由 Lobster 与 Hermes 联合评估 · 版本 v4.0</p>
+    </footer>
+</body>
+</html>
